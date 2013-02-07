@@ -1,19 +1,19 @@
 VIM configuration files from https://github.com/brandondean/Vim/
 
-The automatic installer.
+h3. The automatic installer.
 
 You can install this via the command line with either `curl` or `wget`.
 
-via `curl`
+h4. via `curl`
 
-curl -L https://github.com/westonmyers/Vim/raw/master/Rakefile; rake install
+@rake install <(curl -s https://github.com/westonmyers/Vim/raw/master/Rakefile)@
 
-via `wget`
+h4. via `wget`
 
-wget --no-check-certificate https://github.com/westonmyers/Vim/raw/master/Rakefile; rake install
+@rake install <(wget --no-check-certificate https://github.com/westonmyers/Vim/raw/master/Rakefile -O -)@
 
-The manual way
+h3. The manual way
 
 1. Clone the repository
 
-git clone git://github.com/brandondean/Vim.git ~/.vim
+@git clone git://github.com/westonmyers/Vim.git ~/.vim@
