@@ -10,7 +10,7 @@ def main
 	elsif File.exists?("/etc/vim/vimrc")==true
 		puts "\nYou already have an existing configuration.\nYou'll need to remove /etc/vim if you want to install.\n\n"
 		usersymlink(1)
-	else
+  else
 		puts "\nChecking for Git."
 		checkgit = system "/usr/bin/env git --version | grep version"
 		if checkgit == true
@@ -58,8 +58,10 @@ def sudoornotsudo
 end
 def singleuser
 	puts "Cloning VIM configuration..."
-	system "/usr/bin/env git clone git://github.com/brandondean/Vim.git ~/.vim"
+	system "/usr/bin/env git clone git://github.com/westonmyers/Vim.git ~/.vim"
+	puts "Initializing and Updating Submodules."
 	system "(cd ~/.vim && git submodule init && git submodule update)"
+	puts "Finished with submodules."
 end
 def globalusers
 	if File.exist?("#{ENV["HOME"]}/.vim-tmp/")==true
@@ -71,7 +73,7 @@ def globalusers
 		puts "Created /etc/vim/ folder."
 	end
 	puts "Cloning VIM configuration..."
-	system "/usr/bin/env git clone git://github.com/brandondean/Vim.git /etc/vim/"
+	system "/usr/bin/env git clone git://github.com/westonmyers/Vim.git /etc/vim/"
 	system "(cd /etc/vim && git submodule init && git submodule update)"
 	return
 end
