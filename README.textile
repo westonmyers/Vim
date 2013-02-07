@@ -14,7 +14,7 @@ h4. via `wget`
 
 h3. The manual way
 
-1. Clone the repository
+1. Clone the repository.
 
 @git clone git://github.com/westonmyers/Vim.git ~/.vim@
-@cd ~/.vim && git submodule init && git submodule update && ln -s ~/.vim/vimrc ~/.vimrc@
+@cd ~/.vim && git submodule init && git submodule update && ln -s ~/.vim/vimrc ~/.vimrc && mkdir ~/.vim-tmp@
